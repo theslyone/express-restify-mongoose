@@ -90,7 +90,7 @@ const restify = function (app, model, opts) {
     options.outputFn = outputFn(!options.restify)
   }
 
-  options.name = options.name || model.modelName
+  options.name = options.name == null ? null : options.name || model.modelName
 
   const ops = require('./operations')(model, options, excludedMap)
 
