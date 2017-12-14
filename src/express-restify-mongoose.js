@@ -94,7 +94,7 @@ const restify = function (app, model, opts) {
 
   const ops = require('./operations')(model, options, excludedMap)
 
-  let uriItem = `${options.prefix}${options.version}${options.name ? `/${option.name}` : ''}`
+  let uriItem = `${options.prefix}${options.version}${options.name ? `/${options.name}` : ''}`
   if (uriItem.indexOf('/:id') === -1) {
     uriItem += '/:id'
   }
